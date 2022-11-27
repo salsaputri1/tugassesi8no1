@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int i, j, a[100][100], b[100][100], sum[100][100], x, y;
+  cout << "Masukan Jumlah Baris: ";
+  cin >> x;
+  cout << "Masukan Jumlah Kolom: ";
+  cin >> y;
+  
+  cout << "Masukan matriks pertama: " << endl;
+  for(x = 0; x < i; x++)
+    for(y = 0; y < j; y++)
+    {
+      cout << "Matriks a" << x + 1 << y + 1 << " : ";
+      cin >> a[x][y];
+      }
+  cout << endl << "Masukan matriks kedua: " << endl;
+  for(x = 0; x < i; x++)
+    for(y = 0; y < j; j++)
+    {
+      cout << "Matriks b" << i + 1 << j + 1 << " : ";
+      cin >> b[x][y];
+      }
+  
+  for(x = 0; x < i; x++)
+    for(y = 0; y < j; y++)
+      sum[x][y] = a[x][y] + b[x][y];
+  cout << "Penjumlahan kedua matriks: " << endl;
+  for(x = 0; x < i; x++){
+    for(y = 0; y < j; y++){
+      cout << sum[x][y] << " ";
+      if(y == j - 1)
+        cout << endl;
+      }
+    }
+  
+  for(x = 0; x < i; x++)
+    for(y = 0; y < j; y++)
+      sum[x][y] = a[x][y] - b[x][y];
+  cout << "Pengurangan kedua matriks :" << endl;
+  for(x = 0; x < i; ++x){
+    for(y = 0; y < j; ++y){
+      cout << sum[i][j] << " ";
+      if(y == j - 1)
+        cout << endl;
+    }
+    }
+
+  for(x = 0; x < i; x++)
+    for(y = 0; y < j; y++)
+      sum[x][y] = a[x][y] * b[x][y];
+  cout << "Perkalian kedua matriks :" << endl;
+  for(x = 0; x < i; x++){
+    for(y = 0; y < j; y++){
+      cout << sum[x][y] << " ";
+      if(y == j - 1)
+        cout << endl;
+    }
+    }
+  return 0;
+  }
